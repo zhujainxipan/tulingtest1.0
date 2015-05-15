@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+                android:background="@drawable/chat_bg_default"
+        >
+    <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:background="#fff"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="5dp"
+            android:paddingLeft="5dp"
+            >
+
+        <EditText
+                android:id="@+id/input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="请输入你想询问的信息"
+                android:layout_weight="4"
+                android:background="@drawable/shape"
+                />
+        <Button
+                android:layout_marginLeft="5dp"
+                android:id="@+id/add"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="提交"
+                android:onClick="addOnClick"
+                android:background="@drawable/shape"
+                />
+
+    </LinearLayout>
+    <ListView
+            android:id="@+id/listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@null"
+            android:dividerHeight="5dp"
+            android:stackFromBottom="true"
+            android:layout_above="@id/linear"
+            android:scrollbarStyle="outsideOverlay"
+            android:cacheColorHint="#0000"/>
+
+</RelativeLayout>
+
